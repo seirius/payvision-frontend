@@ -1,36 +1,38 @@
 <template>
-  <v-app>
-    <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
-    </v-app-bar>
+    <v-app :style="{
+            background: $vuetify.theme.themes[theme].background
+        }">
+        <v-app-bar app>
+            <v-toolbar-title class="headline text-uppercase">
+                <span>Payvision</span>
+                <span class="font-weight-light">|Fullstack challenge</span>
+            </v-toolbar-title>
+        </v-app-bar>
 
-    <v-content>
-      <HelloWorld/>
-    </v-content>
-  </v-app>
+        <v-content>
+            <router-view></router-view>
+        </v-content>
+    </v-app>
 </template>
 
+<style lang="scss">
+html {
+    overflow: hidden !important;
+}
+</style>
+
+
 <script>
-import HelloWorld from './components/HelloWorld';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-  },
-  data: () => ({
-    //
-  }),
+    name: "App",
+    data: () => ({
+        //
+    }),
+    computed: {
+        theme() {
+            return this.$vuetify.theme.dark ? "dark" : "light";
+        }
+    }
 };
 </script>

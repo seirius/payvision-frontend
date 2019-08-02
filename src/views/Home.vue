@@ -1,13 +1,13 @@
 <template>
-  <HelloWorld />
+    <Transactions />
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld';
+import Transactions from "../components/Transactions";
 
 export default {
-  components: {
-    HelloWorld,
-  },
+    components: {
+        Transactions
+    }
 };
 </script>
