@@ -1,15 +1,12 @@
 # Payvision frontend|Fullstack challenge
 
-This repo displays a table that shows a list of Transactions. It's made with Vue CLI + vuetify. It works with [this server](https://github.com/seirius/payvision-backend).
+This repo displays a table that shows a list of Transactions. It's made with Vue CLI + vuetify.
+
+For deploying this project you should install [payvision-backend](https://github.com/seirius/payvision-backend) and place the compiled code in 'web-dist' directory.
 
 ## Project setup
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
 ```
 
 ### Compiles and minifies for production
